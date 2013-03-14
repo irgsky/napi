@@ -13,7 +13,6 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	db = mongoose.connect('mongodb://localhost/dota2best');
 
-
 var app = express();
 
 app.configure(function() {

@@ -21,7 +21,12 @@ function saveHero(req, res) {
 		// }
 	});
 
-	res.redirect('/add_hero');
+	console.log(req.body.name);
+	res.contentType('json');
+	res.send({ some: JSON.stringify({response:'json'}) });
+
+//	res.redirect('/add_hero');
+//	res.json({status: 'ok' });
 }
 
 function getListOfHeroes(req, res) {
