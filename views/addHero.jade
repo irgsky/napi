@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	a(href='/', class='', title='Main page') Main page
+
+	h1= title
+	
+	form(id="hero_form", class="", action="/save_hero", enctype="multipart/form-data", method="post")
+		p(style="float: left; margin: 0") name 
+		input(type="text", name="name", style="float: left; clear: right")
+		input(type="file", name="file", style="float: left; clear: both")
+		input(type="submit", name="Save", style="float: left; margin: 5px 0 0 0; clear: both")

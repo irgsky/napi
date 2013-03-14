@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	div#main_content
+		div#header_block
+			div#main_links
+				//- a(href='/index', class='main_link', title='View main page') Main page
+				//- a(href='/best_in_dota', class='main_link', title='Best in Dota') Best in Dota
+				a(href='/heroes_list', class='main_link', title='List of heroes') List of heroes
+				//- a(href='/guest_book', class='main_link', title='Guest book') Guest book
+				a(href='/add_hero', class='main_link', title='Add book') Add hero
+
+		div#center_block
+
+
+		div#center_block
+
