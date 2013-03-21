@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	script(src="/javascripts/fileUpload.js")
+
+
+	a(href='/', class='', title='Main page') Main page
+	h1= title
+
+	form(id="heroForm", class="", action="/upload_file_ajax", enctype="multipart/form-data", method="post")
+		input(type="file", name="file", style="float: left; clear: both")
+		input(type="submit", name="Save", value="Upload file", style="float: left; margin: 5px 0 0 0; clear: both", onclick="return Uploader.uploadFile();")
+

@@ -9,6 +9,7 @@ var express = require('express'),
 	// routes
 	indexRouter = require('./routes/indexRouter'),
 	heroesRouter = require('./routes/heroesRouter'),
+	uploadRouter = require('./routes/uploadRouter'),
 	// database
 	mongoose = require('mongoose'),
 	db = mongoose.connect('mongodb://localhost/dota2best');
@@ -35,6 +36,11 @@ app.get('/', indexRouter.index);
 app.get('/add_hero', heroesRouter.addHero);
 app.post('/save_hero', heroesRouter.saveHero);
 app.get('/heroes_list', heroesRouter.heroesList);
+
+// Upload file
+app.get('/upload_file', uploadRouter.uploadFile);
+app.post('/upload_file_ajax', uploadRouter.uploadFileAjax);
+
 
 // console.log(app.routes);
 
