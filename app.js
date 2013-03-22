@@ -39,6 +39,7 @@ app.get('/heroes_list', heroesRouter.heroesList);
 
 // Upload file
 app.get('/upload_file', uploadRouter.uploadFile);
+app.post('/upload_file_post', uploadRouter.uploadFilePost);
 app.post('/upload_file_ajax', uploadRouter.uploadFileAjax);
 
 

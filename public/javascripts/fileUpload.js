@@ -4,7 +4,8 @@ function uploader() {
 			type: "POST",
 			url: "/upload_file_ajax",
 			data: JSON.stringify({ 
-				name: 'testName', fact: "testFact" 
+				name: 'testName',
+				thumbnail: $('#fileToUpload').val()
 			}),
 			contentType: "application/json; charset=utf-8",
 			dataType: "json",
